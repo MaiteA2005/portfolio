@@ -12,11 +12,11 @@ nav {
   justify-content: center;
   align-items: center;
   background: #f4f4f4;
-  padding: 1rem;
-  gap: 2rem;
+  padding: 1.5rem;
+  gap: 4rem;
 }
 
-nav a {
+nav a, a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -30,7 +30,7 @@ nav a:hover {
 header.header {
   text-align: center;
   padding: 3rem 2rem;
-  background: #fafafa;
+  background: #a4a4a4;
 }
 
 /* Secties */
@@ -45,24 +45,51 @@ section h2 {
   text-align: center;
 }
 
-/* Over mij */
-.overMij {
+/* Over mij sectie */
+.over-mij {
+  padding: 3rem 2rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.over-mij-container {
   display: flex;
-  align-items: center;
   gap: 2rem;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.overMij p {
-  flex: 1;
-  min-width: 250px;
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
+/* Foto links */
+.img-placeholder {
+  width: 220px;
+  height: 220px;
+  background: #ddd;
+  border-radius: 12px; /* verander naar 50% voor rond */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0; /* voorkomt dat het blok krimpt */
 }
 
-/* Diensten */
-.diensten ul {
+/* Tekst rechts */
+.over-mij-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.over-mij-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+
+/* Kennis */
+.kennis ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
@@ -70,7 +97,7 @@ section h2 {
   padding: 0;
 }
 
-.diensten li {
+.kennis li {
   background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
@@ -96,7 +123,7 @@ section h2 {
 /* Contact sectie */
 .contact {
   padding: 3rem 2rem;
-  max-width: 1100px;
+  max-width: 60%;
   margin: 0 auto;
 }
 

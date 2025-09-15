@@ -10,7 +10,7 @@
     <nav>
         <a href="home.html">Home</a>
         <a href="#">Over mij</a>
-        <a href="#">Diensten / kennis</a>
+        <a href="#">Kennis</a>
         <a href="#">Projecten</a>
         <a href="#">Contact</a>
     </nav>
@@ -18,13 +18,30 @@
         <h1>Welkom op mijn portfolio</h1>
         <p>Hier vind je informatie over mij en mijn projecten.</p>
     </header>
-    <section class="overMij">
-        <img src="#" alt="placeholder">
-        <h2>Over mij</h2>
-        <p>Ik ben Maite Aldenkamp, een Digital Experience design student. Ik ben gepassioneerd over [jouw interesses of specialisaties].</p>
+    <section class="over-mij">
+        <div class="over-mij-container">
+            
+            <!-- Foto links -->
+            <div class="over-mij-img">
+            <div class="img-placeholder">Foto</div>
+            </div>
+
+            <!-- Tekst + titel rechts -->
+            <div class="over-mij-text">
+            <h2>Over mij</h2>
+            <p>
+                Hallo, ik ben <strong>Maite Aldenkamp</strong>, een Digital Experience Design student. 
+                Ik ben gepassioneerd door het ontwerpen én ontwikkelen van digitale ervaringen. 
+                Wat mij motiveert, is de combinatie van creatief design en technisch development: 
+                van het uitwerken van een gebruiksvriendelijk interface tot het effectief bouwen 
+                van de oplossing. Zo kan ik ideeën niet alleen bedenken, maar ook écht tot leven brengen.
+            </p>
+            </div>
+
+        </div>
     </section>
-    <section class="diensten">
-        <h2>Diensten / Kennis</h2>
+    <section class="kennis">
+        <h2>Kennis</h2>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -36,9 +53,11 @@
     <section class="projecten">
         <h2>Recente Projecten</h2>
         <ul>
-            <li><a href="#">Zuiderbad</a> - Korte beschrijving van project 1.</li>
-            <li><a href="#">Autoworld</a> - Korte beschrijving van project 2.</li>
-            <li><a href="#">Special Olympics</a> - Korte beschrijving van project 3.</li>
+            <li><a href="#"><h3>Zuiderbad</h3></a><p>Eerste project voor een klant, Zuiderbad. Onze opdracht was om een interactieve kaart te maken</p></li>
+            <li><a href="#"><h3>Autoworld</h3></a><p>VR project rond Autoworld</p></li>
+            <li><a href="#"><h3>Special Olympics</h3></a><p>Project in opdracht van de Special Olympics Belgium, het ontwerpen van een nieuwe website</p></li>
+            <li><a href="#"><h3>Little Wardrobe</h3></a><p>Eerste project met thema Sustainable Fashion</p></li>
+
         </ul>
     </section>
     <section class="contact">
@@ -49,16 +68,16 @@
             <div class="contact-info">
                 <p>Je kan mij bereiken via:</p>
                 <ul>
-                    <li>Email</li>
-                    <li>Telefoonnummer</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Linkedin</li>
+                    <li>Email:<a href="mailto:aldenkampmaite@gmail.com">aldenkampmaite@gmail.com</a></li>
+                    <li>Telefoonnummer:<a href="tel:+32470613239">+32470613239</a></li>
+                    <li><a href="https://www.instagram.com/maitealdenkamp" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/maite-aldenkamp" target="_blank">Linkedin</a></li>
                 </ul>
             </div>
 
             <!-- Contactformulier -->
-            <form class="contact-form" action="mailto:[jouw-email]" method="post" enctype="text/plain">
+            <form class="contact-form" action="mailto:aldenkampmaite@gmail.com" method="post" enctype="text/plain">
                 <div class="form-group">
                     <label for="name">Naam</label>
                     <input type="text" id="name" name="name" required>
