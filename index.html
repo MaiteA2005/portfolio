@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
-<body>
+<body id="top">
     <!-- Navigatie -->
     <nav>
-        <a href="index.html"><img class="logo" src="./images/logo.png" alt="Logo"></a>
-        <a href="index.html">Home</a>
-        <a href="index.html#over-mij">Over mij</a>
-        <a href="index.html#kennis">Kennis</a>
-        <a href="index.html#projecten">Projecten</a>
-        <a class="contactBtn" href="index.html#contact">Contact</a>
+        <a href="#top"><img class="logo" src="./images/logo.png" alt="Logo"></a>
+        <a href="#top">Home</a>
+        <a href="#overMij">Over mij</a>
+        <a href="#kennis">Kennis</a>
+        <a href="#projecten">Projecten</a>
+        <a class="contactBtn" href="#contact">Contact</a>
     </nav>
 
     <!-- Hero -->
     <header class="hero">
         <figure class="heroImg">FOTO</figure>
         <section class="heroText">
-        <p>Hallo, ik ben</p>
-        <h1>Maite Aldenkamp</h1>
-        <h3>Student Digital Experience Design</h3>
-        <p>
-            <a href="#contact" class="btn">Contact</a>
-            <a href="#" class="btn">Download CV</a>
-        </p>
+            <p>Hallo, ik ben</p>
+            <h1>Maite Aldenkamp</h1>
+            <h3>Student Digital Experience Design</h3>
+            <p>
+                <a href="#contact" class="btn">Contact</a>
+                <a href="./files/CV_MaiteAldenkamp.pdf" class="btn" download="CV_MaiteAldenkamp.pdf">Download CV</a>
+            </p>
         </section>
     </header>
 
@@ -84,21 +84,29 @@
             </div>
 
             <ul class="projectGrid">
-                <li class="projectCard" data-category="development , uxui">
-                <figure class="projectImg">Zuiderbad logo</figure>
-                <h3>Zuiderbad</h3>
+                <li class="projectCard" data-category="development uxui">
+                    <a class="projectLinks" href="./projects/zuiderbad.html">
+                        <figure class="projectImg"><img src="./images/zuiderbad-logo.png" alt="Zuiderbad"></figure>
+                        <h3>Zuiderbad</h3>
+                    </a>
                 </li>
                 <li class="projectCard" data-category="vr">
-                <figure class="projectImg">Autoworld logo</figure>
-                <h3>Autoworld</h3>
+                    <a class="projectLinks" href="./projects/autoworld.html">
+                        <figure class="projectImg"><img src="./images/autoworld-logo.png" alt="Autoworld"></figure>
+                        <h3>Autoworld</h3>
+                    </a>
                 </li>
                 <li class="projectCard" data-category="uxui">
-                <figure class="projectImg">Special Olympics</figure>
-                <h3>Special Olympics Belgium</h3>
+                    <a class="projectLinks" href="./projects/special-olympics.html">
+                        <figure class="projectImg"><img src="./images/sob-logo.png" alt="Special Olympics Belgium"></figure>
+                        <h3>Special Olympics Belgium</h3>
+                    </a>
                 </li>
-                <li class="projectCard" data-category="development, uxui">
-                <figure class="projectImg">Little Wardrobe</figure>
-                <h3>Little Wardrobe</h3>
+                <li class="projectCard" data-category="development uxui">
+                    <a class="projectLinks" href="./projects/little-wardrobe.html">
+                        <figure class="projectImg"><img src="./images/littleWardrobe-logo.png" alt="Little Wardrobe"></figure>
+                        <h3>Little Wardrobe</h3>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -117,9 +125,9 @@
             </ul>
         </aside>
         <form class="contact-form">
-            <label>Naam<input type="text" required></label>
-            <label>Email<input type="email" required></label>
-            <label>Bericht<textarea required></textarea></label>
+            <label>Naam<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Bericht<textarea name="message" required></textarea></label>
             <button type="submit">Verzenden</button>
         </form>
         </section>
@@ -132,10 +140,10 @@
             <h4>Quick links</h4>
             <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#over-mij">Over mij</a></li>
-            <li><a href="index.html#kennis">Kennis</a></li>
-            <li><a href="index.html#projecten">Projecten</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#overMij">Over mij</a></li>
+            <li><a href="#kennis">Kennis</a></li>
+            <li><a href="#projecten">Projecten</a></li>
+            <li><a href="#contact">Contact</a></li>
             </ul>
         </article>
         <article>
@@ -154,27 +162,27 @@
 
     <script>
         const filterButtons = document.querySelectorAll(".filterButtons .tag");
-        const projectCards = document.querySelectorAll(".projectCard");
+        const projectCards  = document.querySelectorAll(".projectCard");
 
         filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            // active styling wisselen
+            button.addEventListener("click", () => {
             filterButtons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
 
             const filter = button.dataset.filter;
 
             projectCards.forEach(card => {
-            // check of kaart in de filter valt
-            if (filter === "all" || card.dataset.tag?.includes(filter)) {
-                card.style.display = "flex";
-            } else {
-                card.style.display = "none";
-            }
+                const categories = (card.dataset.category || "")
+                .split(/[,\s]+/)              // split op komma's of spaties
+                .map(s => s.trim())
+                .filter(Boolean);
+
+                const show = filter === "all" || categories.includes(filter);
+                card.style.display = show ? "flex" : "none";
+            });
             });
         });
-        });
-
     </script>
+
 </body>
 </html>

@@ -12,6 +12,9 @@
   margin: 0;
 }
 /* Algemene basis */
+html { scroll-behavior: smooth; }
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -298,7 +301,8 @@ nav .contactBtn {
   background-color: rgba(86, 140, 149, 0.6);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2;
+  z-index: 0;
+  pointer-events: none; 
 }
 
 .projectCard:hover::before {
@@ -316,6 +320,12 @@ nav .contactBtn {
   z-index: 1;
 }
 
+.projectImg img {
+  max-width: 150%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .projectCard h3 {
   margin: 0;
   padding: 1rem;
@@ -323,10 +333,14 @@ nav .contactBtn {
   color: var(--base1);
   font-size: 1rem;
   text-align: center;
-  z-index: 3;
+  z-index: 1;
   position: relative;
 }
 
+.projectLinks {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* Contact sectie */
 .contact {
@@ -374,7 +388,6 @@ nav .contactBtn {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
-
 }
 
 .contact-info li:hover {
@@ -438,13 +451,16 @@ footer {
   text-align: center;
 }
 
-.footer-links , .footer-links a{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--base1);
+.footer-links {
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:2rem; 
+  justify-content:center;
+}
+
+.footer-links a {
+  text-decoration:none; 
+  color:var(--base1);
 }
 
 .footer-links article {
@@ -472,11 +488,11 @@ footer {
   transition: color 0.3s ease;
 }
 
-footer a:hover {
+.footer-links a:hover {
   color: var(--blueDetail2);
 }
 
 footer p {
   font-size: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
