@@ -8,97 +8,173 @@
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body>
+    <!-- Navigatie -->
     <nav>
-        <a href="home.html">Home</a>
-        <a href="#">Over mij</a>
-        <a href="#">Kennis</a>
-        <a href="#">Projecten</a>
-        <a href="#">Contact</a>
+        <a href="index.html"><img class="logo" src="./images/logo.png" alt="Logo"></a>
+        <a href="index.html">Home</a>
+        <a href="index.html#over-mij">Over mij</a>
+        <a href="index.html#kennis">Kennis</a>
+        <a href="index.html#projecten">Projecten</a>
+        <a class="contactBtn" href="index.html#contact">Contact</a>
     </nav>
-    <header class="header">
-        <h1>Welkom op mijn portfolio</h1>
-        <p>Hier vind je informatie over mij en mijn projecten.</p>
-    </header>
-    <section class="over-mij">
-        <div class="over-mij-container">
-            
-            <!-- Foto links -->
-            <div class="over-mij-img">
-            <div class="img-placeholder">Foto</div>
-            </div>
 
-            <!-- Tekst + titel rechts -->
-            <div class="over-mij-text">
+    <!-- Hero -->
+    <header class="hero">
+        <figure class="heroImg">FOTO</figure>
+        <section class="heroText">
+        <p>Hallo, ik ben</p>
+        <h1>Maite Aldenkamp</h1>
+        <h3>Student Digital Experience Design</h3>
+        <p>
+            <a href="#contact" class="btn">Contact</a>
+            <a href="#" class="btn">Download CV</a>
+        </p>
+        </section>
+    </header>
+
+    <!-- Over mij -->
+    <main>
+        <section id="overMij" class="overMij">
+        <article>
             <h2>Over mij</h2>
             <p>
-                Hallo, ik ben <strong>Maite Aldenkamp</strong>, een Digital Experience Design student. 
-                Ik ben gepassioneerd door het ontwerpen én ontwikkelen van digitale ervaringen. 
-                Wat mij motiveert, is de combinatie van creatief design en technisch development: 
-                van het uitwerken van een gebruiksvriendelijk interface tot het effectief bouwen 
-                van de oplossing. Zo kan ik ideeën niet alleen bedenken, maar ook écht tot leven brengen.
+            Hallo, ik ben <strong>Maite Aldenkamp</strong>, een Digital Experience Design student. 
+            Ik ben gepassioneerd door het ontwerpen én ontwikkelen van digitale ervaringen. 
+            Wat mij motiveert, is de combinatie van creatief design en technisch development: 
+            van het uitwerken van een gebruiksvriendelijke interface tot het effectief bouwen 
+            van de oplossing. Zo kan ik ideeën niet alleen bedenken, maar ook écht tot leven brengen.
             </p>
-            </div>
+        </article>
+        <figure class="overMijImg">FOTO</figure>
+        </section>
 
-        </div>
-    </section>
-    <section class="kennis">
+        <!-- Kennis -->
+        <section id="kennis" class="kennis">
         <h2>Kennis</h2>
-        <ul>
+        <p>Uitleg</p>
+
+        <h3>Soft skills</h3>
+        <ul class="skillsGrid">
+            <li>Werken in groep</li>
+            <li>Sociaal</li>
+            <li>Flexibel</li>
+            <li>Eerlijk</li>
+        </ul>
+        
+        <h3>Hard skills</h3>
+        <ul class="skillsGrid">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>Figma design</li>
-            <li>UX/UI design</li>
+            <li>Figma</li>
+            <li>UX/UI Design</li>
         </ul>
-    </section>
-    <section class="projecten">
-        <h2>Recente Projecten</h2>
-        <ul>
-            <li><a href="#"><h3>Zuiderbad</h3></a><p>Eerste project voor een klant, Zuiderbad. Onze opdracht was om een interactieve kaart te maken</p></li>
-            <li><a href="#"><h3>Autoworld</h3></a><p>VR project rond Autoworld</p></li>
-            <li><a href="#"><h3>Special Olympics</h3></a><p>Project in opdracht van de Special Olympics Belgium, het ontwerpen van een nieuwe website</p></li>
-            <li><a href="#"><h3>Little Wardrobe</h3></a><p>Eerste project met thema Sustainable Fashion</p></li>
+        </section>
 
-        </ul>
-    </section>
-    <section class="contact">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            
-            <!-- Contactopties -->
-            <div class="contact-info">
-                <p>Je kan mij bereiken via:</p>
-                <ul>
-                    <li>Email:<a href="mailto:aldenkampmaite@gmail.com">aldenkampmaite@gmail.com</a></li>
-                    <li><a href="https://www.instagram.com/maitealdenkamp" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com/in/maite-aldenkamp" target="_blank">Linkedin</a></li>
-                </ul>
+        <!-- Projecten -->
+        <section id="projecten" class="projecten">
+            <h2>Projecten</h2>
+            <p>Uitleg</p>
+
+            <div class="filterButtons">
+                <button class="tag active" data-filter="all">All</button>
+                <button class="tag" data-filter="development">Development</button>
+                <button class="tag" data-filter="uxui">UX/UI design</button>
+                <button class="tag" data-filter="vr">VR</button>
             </div>
 
-            <!-- Contactformulier -->
-            <form class="contact-form" action="mailto:aldenkampmaite@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Naam</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+            <ul class="projectGrid">
+                <li class="projectCard" data-category="development , uxui">
+                <figure class="projectImg">Zuiderbad logo</figure>
+                <h3>Zuiderbad</h3>
+                </li>
+                <li class="projectCard" data-category="vr">
+                <figure class="projectImg">Autoworld logo</figure>
+                <h3>Autoworld</h3>
+                </li>
+                <li class="projectCard" data-category="uxui">
+                <figure class="projectImg">Special Olympics</figure>
+                <h3>Special Olympics Belgium</h3>
+                </li>
+                <li class="projectCard" data-category="development, uxui">
+                <figure class="projectImg">Little Wardrobe</figure>
+                <h3>Little Wardrobe</h3>
+                </li>
+            </ul>
+        </section>
 
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+        <!-- Contact -->
+        <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Uitleg</p>
+        <aside>
+            <ul class="contact-info">
+            <li>Email</li>
+            <li>Github</li>
+            <li>LinkedIn</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            </ul>
+        </aside>
+        <form class="contact-form">
+            <label>Naam<input type="text" required></label>
+            <label>Email<input type="email" required></label>
+            <label>Bericht<textarea required></textarea></label>
+            <button type="submit">Verzenden</button>
+        </form>
+        </section>
+    </main>
 
-                <div class="form-group">
-                    <label for="message">Bericht</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">Versturen</button>
-            </form>
-        </div>
-    </section>
+    <!-- Footer -->
     <footer>
+        <section class="footer-links">
+        <article>
+            <h4>Quick links</h4>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#over-mij">Over mij</a></li>
+            <li><a href="index.html#kennis">Kennis</a></li>
+            <li><a href="index.html#projecten">Projecten</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </article>
+        <article>
+            <h4>Contacteer me</h4>
+            <ul>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            </ul>
+        </article>
+        </section>
         <p>&copy; 2025 Maite Aldenkamp. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll(".filterButtons .tag");
+        const projectCards = document.querySelectorAll(".projectCard");
+
+        filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // active styling wisselen
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const filter = button.dataset.filter;
+
+            projectCards.forEach(card => {
+            // check of kaart in de filter valt
+            if (filter === "all" || card.dataset.tag?.includes(filter)) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+            });
+        });
+        });
+
+    </script>
 </body>
 </html>
