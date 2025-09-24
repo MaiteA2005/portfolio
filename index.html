@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body id="top">
-    <!-- Navigatie -->
     <nav>
-        <a href="#top"><img class="logo" src="./images/logo.png" alt="Logo"></a>
-        <a href="#top">Home</a>
-        <a href="#overMij">Over mij</a>
-        <a href="#kennis">Kennis</a>
-        <a href="#projecten">Projecten</a>
-        <a class="contactBtn" href="#contact">Contact</a>
+        <a href="#top">
+            <img class="logo" src="./images/logo.png" alt="Logo">
+        </a>
+
+        <button class="hamburger" aria-label="Menu"> ☰ </button>
+
+        <ul class="navLinks">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#overMij">Over mij</a></li>
+            <li><a href="#kennis">Kennis</a></li>
+            <li><a href="#projecten">Projecten</a></li>
+            <li><a class="contactBtn" href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero -->
     <header class="hero">
         <figure class="heroImg">FOTO</figure>
         <section class="heroText">
@@ -32,7 +37,6 @@
         </section>
     </header>
 
-    <!-- Over mij -->
     <main>
         <section id="overMij" class="overMij">
         <article>
@@ -113,18 +117,19 @@
 
         <!-- Contact -->
         <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Uitleg</p>
-        <aside>
-            <ul class="contact-info">
-            <li>Email</li>
-            <li>Github</li>
-            <li>LinkedIn</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
+        <div class="contactLeft">
+            <h2>Contact</h2>
+            <p>Uitleg</p>
+            <ul class="contactInfo">
+            <li><a class="contactLink" href="mailto:aldenkampmaite@gmail.com">Email</a></li>
+            <li><a class="contactLink" href="https://github.com/MaiteA2005">Github</a></li>
+            <li><a class="contactLink" href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386">LinkedIn</a></li>
+            <li><a class="contactLink" href="https://www.instagram.com/maitealdenkamp/">Instagram</a></li>
+            <li><a class="contactLink" href="https://www.facebook.com/maite.aldenkamp">Facebook</a></li>
             </ul>
-        </aside>
-        <form class="contact-form">
+        </div>
+
+        <form class="contactForm">
             <label>Naam<input type="text" name="name" required></label>
             <label>Email<input type="email" name="email" required></label>
             <label>Bericht<textarea name="message" required></textarea></label>
@@ -135,7 +140,7 @@
 
     <!-- Footer -->
     <footer>
-        <section class="footer-links">
+        <section class="footerLinks">
         <article>
             <h4>Quick links</h4>
             <ul>
@@ -149,11 +154,11 @@
         <article>
             <h4>Contacteer me</h4>
             <ul>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="mailto:aldenkampmaite@gmail.com">Email</a></li>
+            <li><a href="https://github.com/MaiteA2005">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/maitealdenkamp/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/maite.aldenkamp">Facebook</a></li>
             </ul>
         </article>
         </section>
@@ -181,6 +186,13 @@
                 card.style.display = show ? "flex" : "none";
             });
             });
+        });
+
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".navLinks");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
         });
     </script>
 

@@ -1,0 +1,288 @@
+/* Kleuren */
+:root {
+  --base1: #ffffff;
+  --base2: #1E1E1E;
+  --blueDetail1: #568C95;
+  --blueDetail2: #b8d6dc;
+  --beige1: #F5EDE0;
+  --beige2: #F1ECE5;
+}
+
+/* Header */
+.projectHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--blueDetail1);
+    margin-bottom: 0;
+    color: var(--base1);
+}
+
+.projectHeader img {
+    max-width: 220px;
+    padding: 2rem;
+    border-radius: 50% 50% 5% 5%;
+    background-color: var(--blueDetail2);
+}
+
+.projectHeader h1 {
+    font-size: 1.8rem;
+    color: var(--base2);
+}
+
+.projectHeader h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.btnProject {
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    background: var(--blueDetail2);
+    color: var(--base2);
+}
+
+.btnProject:hover {
+    background: var(--beige1);
+    color: var(--blueDetail1);
+    text-decoration: underline;
+}
+
+/* Project Info */
+.project-info {
+    padding: 2rem;
+    margin: 1.5em auto;
+}
+
+.project-info ul {
+    list-style: none;
+    line-height: 1.8;
+}
+
+.project-info li strong {
+    color: var(--blueDetail1);
+}
+
+/* Secties */
+
+section {
+    max-width: 900px;   
+    margin: 0 auto;     
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--base2);
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+.full-width {
+    max-width: 100%;   
+    margin: 0;         
+    padding: 2rem;     
+}
+
+.intro , .opdracht{
+    background: var(--beige1);
+    padding: 2rem;
+}
+
+.probleem {
+    background: var(--blueDetail2);
+    margin:  0;
+    text-align: right;
+    padding: 2rem ;
+}
+
+/* Proces */
+.proces {
+    padding: 2rem;
+}
+
+.proces h3{
+    background-color: var(--blueDetail1);
+    color: var(--base1);
+    width: 50%;
+    justify-self: center;
+    border-radius: 25px;
+    padding: 0.5rem;
+}
+
+.proces h3, .proces .insta {
+    text-align: center;
+}
+
+.proces a {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--blueDetail1);
+    text-decoration: underline;
+}
+
+.proces a:hover {
+    color: var(--blueDetail2);
+}
+
+.proces h4 {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--base2);
+}
+
+.proces-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.proces-grid img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Eindproduct */
+.eindproduct {
+    padding: 2rem;
+}
+
+.eindproduct h3 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.eindproduct .btnProject {
+    display: block;
+    justify-self: center;
+    background: var(--blueDetail2);
+    color: var(--base2);
+    padding: 0.8rem ;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+    width: 60%;
+}
+
+.eindproduct .btnProject:hover {
+    background: var(--blueDetail1);
+    color: var(--base1);
+}
+
+.devices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.devices img {
+    width: 80%;
+}
+
+.laptop {
+    display: flex;
+    justify-content: center;
+}
+
+.laptop img {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .projectHeader h1 {
+        font-size: 2rem;
+    }
+
+    .projectHeader h2 {
+        font-size: 1.3rem;
+    }
+
+    .btnProject {
+        width: auto;
+    }
+
+    .proces-grid {
+        grid-template-columns: 1fr 1fr; /* twee kolommen */
+    }
+
+    .devices {
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+    .devices img {
+        width: 45%;
+    }
+
+    .intro , .opdracht{
+        padding: 2rem 4rem;
+    }
+
+    .probleem {
+        padding: 2rem 4rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .projectHeader {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+        padding: 3rem;
+    }
+
+    .projectHeader img {
+        max-width: 300px;
+        padding: 2.5rem;
+    }
+
+    .projectHeader h1 {
+        font-size: 2.5rem;
+    }
+
+    .projectHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        max-width: 1000px;
+    }
+
+    .intro , .opdracht{
+        padding: 2rem 10rem;
+    }
+
+    .probleem {
+        padding: 2rem 10rem;
+    }
+
+    .devices img {
+        width: 30%;
+    }
+
+    .laptop img {
+        max-width: 95%;
+    }
+}
