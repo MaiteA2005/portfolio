@@ -23,19 +23,19 @@
 }
 
 .projectHeader img {
-    max-width: 220px;
+    max-width: 300px;
     padding: 2rem;
     border-radius: 50% 50% 5% 5%;
     background-color: var(--blueDetail2);
 }
 
 .projectHeader h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--base2);
 }
 
 .projectHeader h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -60,19 +60,32 @@
     text-decoration: underline;
 }
 
-/* Project Info */
-.project-info {
-    padding: 2rem;
+/* Project info */
+.projectInfo {
+    padding: 1.5rem;
     margin: 1.5em auto;
+    max-width: 700px;
 }
 
-.project-info ul {
-    list-style: none;
-    line-height: 1.8;
+.projectInfo .row {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px dashed var(--blueDetail1);
 }
 
-.project-info li strong {
+.projectInfo .row strong {
     color: var(--blueDetail1);
+    font-weight: 600;
+}
+
+.projectInfo .row span {
+    line-height: 1.6;
+}
+
+.projectInfo .row:last-child {
+    border-bottom: none;
 }
 
 /* Secties */
@@ -210,12 +223,25 @@ section p {
 }
 
 @media (min-width: 768px) {
+    .projectHeader {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+        padding: 2.5rem 4rem 0rem 4rem;
+    }
+
+    .projectHeader img {
+        max-width: 350px;
+        padding: 2.5rem;
+        margin-bottom: 0;
+    }
+
     .projectHeader h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .projectHeader h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .btnProject {
@@ -223,12 +249,12 @@ section p {
     }
 
     .proces-grid {
-        grid-template-columns: 1fr 1fr; /* twee kolommen */
+        grid-template-columns: 1fr 1fr;
     }
 
     .devices {
-    flex-direction: row;
-    flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .devices img {
@@ -246,16 +272,10 @@ section p {
 
 /* Desktop */
 @media (min-width: 1024px) {
-    .projectHeader {
-        flex-direction: row;
-        text-align: left;
-        gap: 2rem;
-        padding: 3rem;
-    }
-
     .projectHeader img {
-        max-width: 300px;
+        max-width: 350px;
         padding: 2.5rem;
+        margin-bottom: 0;
     }
 
     .projectHeader h1 {
@@ -263,7 +283,7 @@ section p {
     }
 
     .projectHeader h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     section {
