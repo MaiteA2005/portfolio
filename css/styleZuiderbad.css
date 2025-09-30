@@ -201,17 +201,61 @@ section p {
     color: var(--base1);
 }
 
+/* Scroll container */
 .devices {
     display: flex;
     flex-direction: column;
+    gap: 3rem;              
+    margin: 4rem 0;
+}
+
+.devices section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+    text-align: left;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.devices section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .devices img {
     width: 80%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 1rem;
 }
+
+.devices .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+.devices h2 {
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--blueDetail1);
+}
+
+.devices p {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--base2);
+}
+
+
 
 .laptop {
     display: flex;
@@ -252,13 +296,32 @@ section p {
         grid-template-columns: 1fr 1fr;
     }
 
-    .devices {
+    .devices section {
         flex-direction: row;
-        flex-wrap: wrap;
+        text-align: left;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2rem;
+    }
+
+    .devices .text {
+        padding: 1rem;
     }
 
     .devices img {
-        width: 45%;
+        width: 40%;
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+    
+    .devices h2 {
+        font-size: 1.5rem;
+    }
+
+    .devices p {
+        font-size: 1rem;
+        max-width: 400px;
     }
 
     .intro , .opdracht{
@@ -294,12 +357,45 @@ section p {
         padding: 2rem 10rem;
     }
 
+    .intro h3 , .intro p , .opdracht h3 , .opdracht p {
+        width: 60%;
+        margin: 0rem 15rem;
+    }
+
     .probleem {
         padding: 2rem 10rem;
     }
 
+    .probleem h3 , .probleem p {
+        width: 60%;
+        margin: 0rem 15rem;
+    }
+
+    .devices section {
+        flex-direction: row;        
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;                  
+        padding: 3rem 4rem;
+        text-align: left;   
+        width: 100%;
+    }
+
     .devices img {
-        width: 30%;
+        width: 40%;                 
+        max-width: 450px;           
+    }
+
+    .devices h2 {
+        width: 80%;
+        font-size: 2rem;            
+        margin-bottom: 1rem;
+    }
+
+    .devices p {
+        font-size: 1.2rem;          
+        line-height: 1.7;
+        max-width: 600px;
     }
 
     .laptop img {
