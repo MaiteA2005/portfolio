@@ -31,8 +31,10 @@ nav {
   background: var(--beige1);
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 8px rgba(184, 214, 220, 0.5);
-  position: relative;
+  position: sticky;
   width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -74,8 +76,8 @@ nav {
 }
 
 .navLinks a:hover {
-  color: var(--blueDetail1);
-  text-decoration: underline;
+  color: var(--base1);
+  background-color: var(--blueDetail1);
 }
 
 .navLinks.active {
@@ -87,11 +89,6 @@ nav {
   color: var(--base2);
   padding: 0.7rem 1.2rem;
   border-radius: 25px;
-}
-
-.contactBtn:hover {
-  background: var(--blueDetail1);
-  color: var(--base1);
 }
 
 /* Hero */
