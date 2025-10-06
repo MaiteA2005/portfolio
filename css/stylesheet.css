@@ -30,7 +30,7 @@ nav {
   align-items: center;
   background: var(--beige1);
   padding: 1rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(184, 214, 220, 0.5);
+  box-shadow: 0 2px 8px rgba(169, 196, 218, 0.5);
   position: sticky;
   width: 100%;
   top: 0;
@@ -324,7 +324,7 @@ nav {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(86, 140, 149, 0.5);
+  box-shadow: 0 4px 12px rgba(169, 196, 218, 0.5);
   position: relative;
 }
 
@@ -335,7 +335,7 @@ nav {
   left: 0;
   width: 100%;
   height: calc(100% - 50px);
-  background-color: rgba(86, 140, 149, 0.6);
+  background-color: rgba(169, 196, 218, 0.6);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
