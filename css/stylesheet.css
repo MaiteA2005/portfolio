@@ -1,8 +1,8 @@
 :root {
   --base1: #ffffff;
   --base2: #1E1E1E;
-  --blueDetail1: #568C95;
-  --blueDetail2: #b8d6dc;
+  --blueDetail1: #0F304A;
+  --blueDetail2: #A9C4DA;
   --beige1: #F5EDE0;
   --beige2: #F1ECE5;
 }
@@ -101,10 +101,7 @@ nav {
 }
 
 .heroImg {
-  width: 310px;
-  height: 330px;
-  background: var(--blueDetail1);
-  border-radius: 50% 50% 5% 5%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +109,7 @@ nav {
   font-weight: bold;
   font-size: 1.2rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 5% 5% 5% 5%;
 }
 
 .heroText {
@@ -572,6 +569,8 @@ footer p {
     text-align: left;
   }
 
+  .heroImg { width: 350px; }
+
   .heroText { padding: 2rem; }
 
   .overMij {
@@ -649,6 +648,7 @@ footer p {
   }
 
   .hero { padding: 4rem 2rem; }
+  .heroImg { width: 400px; }
   .heroText h1 { font-size: 2.8rem; }
   .heroText h3 { font-size: 1.5rem; }
 

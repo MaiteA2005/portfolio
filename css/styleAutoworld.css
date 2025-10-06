@@ -1,0 +1,24 @@
+.probleem , .mijnRol {
+    background: var(--blueDetail2);
+    margin:  0;
+    text-align: right;
+    padding: 2rem ;
+}
+
+
+@media (min-width: 768px) {
+    .probleem , .mijnRol {
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .probleem , .mijnRol {
+        padding: 2rem 10rem;
+    }
+
+    .probleem h3 , .probleem p , .mijnRol h3 , .mijnRol p {
+        width: 60%;
+        margin: 0rem 15rem;
+    }
+}
