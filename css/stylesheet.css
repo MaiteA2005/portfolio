@@ -156,48 +156,63 @@ nav {
   color: var(--base1);
 }
 
-
-/* Over mij section */
-.overMij {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem 3rem 2rem;
+/* Algemene container */
+.profiel {
+  padding: 3rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
-.overMij article {
+/* Over mij + opleidingen naast elkaar */
+.overMijContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.overMij, .opleidingen {
   flex: 1;
+  background-color: var(--base1);
 }
 
-.overMij article h2 {
-  line-height: 1.6;
-  text-align: left;
-  margin-bottom: 0.5rem;
+.overMij h2, .opleidingen h2 {
+  color: var(--blueDetail1);
+  margin-bottom: 1rem;
 }
 
-.overMij article p {
+.overMij p {
   background-color: var(--blueDetail2);
   padding: 1.5rem;
   border-radius: 10px;
   line-height: 1.6;
 }
 
-.overMijImg {
-  width: 300px;
-  height: 330px;
-  background-color: var(--beige2);
-  border-radius: 50% 50% 5% 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Opleidingen lijst */
+.opleidingenLijst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opleidingenLijst li {
+  border-left: 4px solid var(--blueDetail1);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: var(--base1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.opleidingenLijst li strong {
+  display: block;
+  font-size: 1.1rem;
   color: var(--base2);
-  font-weight: bold;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.opleidingenLijst li span {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Kennis */
@@ -545,7 +560,7 @@ footer p {
   margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
 
   nav {
     justify-content: center;   
@@ -573,15 +588,19 @@ footer p {
 
   .heroText { padding: 2rem; }
 
-  .overMij {
-    flex-direction: row;
-    text-align: left;
-  }
-
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  .overMijContainer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .overMij, .opleidingen {
+    flex: 1;
   }
 
   .kennis h3 {
