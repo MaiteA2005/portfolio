@@ -175,5 +175,14 @@
         </section>
         <p>&copy; 2025 Maite Aldenkamp. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".navLinks");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
