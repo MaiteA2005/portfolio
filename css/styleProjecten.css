@@ -265,7 +265,6 @@ section p {
     }
 
     .intro h3 , .intro p , .opdracht h3 , .opdracht p {
-        width: 60%;
         margin: 0rem 15rem;
     }
 
@@ -274,7 +273,6 @@ section p {
     }
 
     .probleem h3 , .probleem p {
-        width: 60%;
         margin: 0rem 15rem;
     }
 }

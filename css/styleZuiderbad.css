@@ -95,14 +95,6 @@
         font-size: 1rem;
         max-width: 400px;
     }
-
-    .intro , .opdracht{
-        padding: 2rem 4rem;
-    }
-
-    .probleem {
-        padding: 2rem 4rem;
-    }
 }
 
 /* Desktop */
