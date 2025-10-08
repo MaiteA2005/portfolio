@@ -62,6 +62,11 @@
     color: var(--base2);
 }
 
+.projectInfo a:hover {
+    text-decoration: underline;
+    color: var(--blueDetail1);
+}
+
 .projectInfo .row {
     display: grid;
     grid-template-columns: 200px 1fr; 
