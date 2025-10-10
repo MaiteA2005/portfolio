@@ -42,6 +42,12 @@ nav {
   width: auto;
 }
 
+.logo:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--blueDetail1);
+  border-radius: 25px;
+}
+
 .hamburger {
   display: block;
   font-size: 2rem;
@@ -51,9 +57,14 @@ nav {
   color: var(--blueDetail1);
 }
 
+.hamburger:hover {
+  color: var(--blueDetail2);
+}
+
 .navLinks {
   display: none;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 70px;
   left: 0;
@@ -63,6 +74,7 @@ nav {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   list-style: none;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .navLinks li { 
@@ -73,6 +85,7 @@ nav {
   text-decoration: none;
   color: var(--base2);
   font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navLinks a:hover {
@@ -168,7 +181,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-bottom: 3rem;
 }
 
 .overMij, .opleidingen {
@@ -215,59 +227,105 @@ nav {
   color: #555;
 }
 
-/* Kennis */
-.kennis {
+/* Soft en hard skills */
+.skillsSection {
+  max-width: 1100px;
   background-color: var(--beige1);
-  padding: 1rem 2rem;
-  text-align: center;
 }
 
-.kennis h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.skillsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.skillsColumn {
+  flex: 1;
+  min-width: 320px;
+}
+
+.skillsColumn h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--base2);
-}
-
-.kennis p {
   margin-bottom: 2rem;
-  color: var(--base2);
 }
 
-.kennis h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  color: var(--base2);
-  max-width: 900px;   
-  margin-left: auto;  
-  margin-right: auto; 
-}
-
-.skillsGrid {
+.softSkills {
   list-style: none;
   padding: 0;
-  margin: 0 auto 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  max-width: 900px;
+  width: 100%;
 }
 
-.skillsGrid li {
-  background-color: var(--base1);
-  border: 2px solid var(--blueDetail1);
-  border-radius: 10px;
-  padding: 1rem;
-  font-weight: 500;
+.softSkills li {
+  border: 1.5px solid var(--blueDetail2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
   color: var(--base2);
   transition: all 0.3s ease;
 }
 
-.skillsGrid li:hover {
-  background-color: var(--blueDetail2);
-  transform: translateY(-4px);
-  cursor: default;
+.hardSkills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+.hardSkills li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.5rem;
+}
+
+.hardSkills img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skillContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.hardSkills span {
+  font-weight: 700;
+  color: var(--base2);
+  margin-bottom: 0.4rem;
+}
+
+.skillBar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--beige2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.level {
+  height: 100%;
+  background-color: var(--blueDetail1);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.6s ease;
+}
+
 
 /* Projecten */
 .projecten {
@@ -572,6 +630,7 @@ footer p {
 
   nav {
     justify-content: center;   
+    width: 100%;
     gap: 3.5rem;               
   }
 
@@ -585,6 +644,12 @@ footer p {
     box-shadow: none;
     gap: 3.5rem;
     width: auto;
+    padding: 0;
+
+  }
+
+  .navLinks li { 
+    margin: 0;
   }
 
   .hero {
@@ -596,12 +661,6 @@ footer p {
 
   .heroText { padding: 2rem; }
 
-  .skillsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
   .overMijContainer {
     flex-direction: row;
     align-items: flex-start;
@@ -611,11 +670,29 @@ footer p {
     flex: 1;
   }
 
-  .kennis h3 {
-    margin-left: 0;
-    max-width: 700px;   
-    margin-left: auto;  
-    margin-right: auto;
+  .skillsContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .hardSkills li {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+ .hardSkills li {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .skillContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .projectGrid {
@@ -689,19 +766,6 @@ footer p {
     gap: 2rem;
   }
   .overMij article p { font-size: 1.1rem; }
-
-  .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    max-width: 1100px;
-  }
-
-  .kennis {
-    padding: 2rem 2rem 5rem 2rem;
-  }
-
-  .kennis h3 {
-    max-width: 1100px;   
-  }
 
   .projectGrid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
