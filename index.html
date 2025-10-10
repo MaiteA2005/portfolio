@@ -33,6 +33,7 @@
     <link rel="canonical" href="https://www.maitealdenkamp.be/">
     <link rel="icon" type="image/x-icon" href="https://www.maitealdenkamp.be/images/favicon.png">
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <script src="./script.js" defer></script>
 </head>
 <body id="top">
     <!-- Google Tag Manager (noscript) -->
@@ -268,37 +269,5 @@
         </section>
         <p>&copy; 2025 Maite Aldenkamp. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script>
-        const filterButtons = document.querySelectorAll(".filterButtons .tag");
-        const projectCards  = document.querySelectorAll(".projectCard");
-
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-
-            const filter = button.dataset.filter;
-
-            projectCards.forEach(card => {
-                const categories = (card.dataset.category || "")
-                .split(/[,\s]+/)              // split op komma's of spaties
-                .map(s => s.trim())
-                .filter(Boolean);
-
-                const show = filter === "all" || categories.includes(filter);
-                card.style.display = show ? "flex" : "none";
-            });
-            });
-        });
-
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".navLinks");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    </script>
-
 </body>
 </html>

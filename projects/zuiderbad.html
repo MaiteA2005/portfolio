@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/styleProjecten.css">
     <link rel="stylesheet" href="../css/styleZuiderbad.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -31,7 +32,6 @@
         <ul class="navLinks">
             <li><a href="../index.html#top">Home</a></li>
             <li><a href="../index.html#overMij">Over mij</a></li>
-            <li><a href="../index.html#kennis">Kennis</a></li>
             <li><a href="../index.html#projecten">Projecten</a></li>
             <li><a class="contactBtn" href="../index.html#contact">Contact</a></li>
         </ul>
@@ -223,29 +223,5 @@
         </section>
         <p>&copy; 2025 Maite Aldenkamp. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".navLinks");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-
-        const sections = document.querySelectorAll(".devices section");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                } else {
-                    entry.target.classList.remove("visible");
-                }
-            });
-        }, { threshold: 0.4 }); // activeer zodra 40% zichtbaar is
-
-        sections.forEach(section => observer.observe(section));
-
-    </script>
 </body>
 </html>
