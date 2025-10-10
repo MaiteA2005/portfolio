@@ -251,7 +251,7 @@ nav {
 .skillsColumn h3 {
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--base2);
+  color: var(--blueDetail1);
   margin-bottom: 2rem;
 }
 
@@ -314,7 +314,7 @@ nav {
 .skillBar {
   width: 100%;
   height: 15px;
-  background-color: var(--beige2);
+  background-color: var(--base1);
   border-radius: 10px;
   overflow: hidden;
   border: #0F304A solid 0.5px;
