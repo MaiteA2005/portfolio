@@ -60,3 +60,25 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 }); // activeer zodra 40% zichtbaar is
 
 sections.forEach(section => observer.observe(section));
+
+
+//carousel voor projecten
+const carousel = document.querySelector('.projectenCarousel');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', e => {
+  isDown = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+carousel.addEventListener('mouseleave', () => (isDown = false));
+carousel.addEventListener('mouseup', () => (isDown = false));
+carousel.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 1.5; // scroll snelheid
+  carousel.scrollLeft = scrollLeft - walk;
+});
