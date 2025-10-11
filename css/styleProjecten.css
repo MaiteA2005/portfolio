@@ -326,6 +326,23 @@ section p {
     .probleem {
         padding: 2rem 4rem;
     }
+
+    .projectenCarousel {
+        overflow-x: hidden;       
+        justify-content: center;  
+        flex-wrap: wrap;          
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .andereProjecten .projectCard {
+        flex: 0 1 calc(50% - 2rem);
+        max-width: 280px;
+    }
+
+    .andereProjecten .projectImg {
+        height: 180px;
+    }
 }
 
 /* Desktop */
@@ -362,5 +379,17 @@ section p {
 
     .probleem h3 , .probleem p {
         margin: 0rem 15rem;
+    }
+
+    .projectenCarousel {
+        overflow: visible;        
+        justify-content: center; 
+        flex-wrap: nowrap;        
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .andereProjecten .projectCard {       
+        max-width: 300px;
     }
 }
