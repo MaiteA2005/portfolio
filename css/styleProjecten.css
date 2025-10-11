@@ -204,6 +204,22 @@ section p {
     color: var(--base1);
 }
 
+/*Reflectie*/
+.reflectie {
+    background: var(--blueDetail2);
+    padding: 2rem;
+    margin: 0 auto ;
+    width: 100%;
+    max-width: none;
+}
+
+.reflectie h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--base2);
+}
+
+
 /*Andere projecten*/
 .andereProjecten {
     padding: 3rem 0;
@@ -319,7 +335,7 @@ section p {
         grid-template-columns: 1fr 1fr;
     }
 
-    .intro , .opdracht{
+    .intro , .opdracht, .reflectie{
         padding: 2rem 4rem;
     }
 
@@ -365,12 +381,19 @@ section p {
         max-width: 1000px;
     }
 
-    .intro , .opdracht{
+    .intro , .opdracht , .reflectie{
         padding: 2rem 10rem;
     }
 
-    .intro h3 , .intro p , .opdracht h3 , .opdracht p {
-        margin: 0rem 15rem;
+    .intro h3 , 
+    .intro p , 
+    .opdracht h3 , 
+    .opdracht p , 
+    .reflectie h3 , 
+    .reflectie p {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: left;
     }
 
     .probleem {
@@ -378,7 +401,9 @@ section p {
     }
 
     .probleem h3 , .probleem p {
-        margin: 0rem 15rem;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: right;
     }
 
     .projectenCarousel {
