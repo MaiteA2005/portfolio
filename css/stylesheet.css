@@ -277,7 +277,7 @@ nav {
 .hardSkills {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -700,6 +700,14 @@ footer p {
     flex-direction: column;
   }
 
+  .skillsColumn h3 {
+    margin-left: 1rem;
+  }
+
+  .hardSkills {
+    margin: 1rem;
+  }
+
   .projectGrid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
@@ -771,6 +779,16 @@ footer p {
     gap: 2rem;
   }
   .overMij article p { font-size: 1.1rem; }
+
+  .skillsContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+
+  .soft{
+    max-width: 300px;
+  }
 
   .projectGrid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
