@@ -704,6 +704,10 @@ footer p {
     margin-left: 1rem;
   }
 
+  .soft{
+    max-width: 30%;
+  }
+
   .hardSkills {
     margin: 1rem;
   }
@@ -787,7 +791,7 @@ footer p {
   }
 
   .soft{
-    max-width: 300px;
+    max-width: 30%;
   }
 
   .projectGrid {
