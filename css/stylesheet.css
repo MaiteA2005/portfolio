@@ -487,8 +487,9 @@ nav {
 
 .contactLeft p {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 4.5rem;
   color: var(--base2);
+  max-width: 500px;
 }
 
 .contactInfo {
@@ -577,71 +578,62 @@ nav {
 footer {
   background-color: var(--blueDetail1);
   color: var(--base1);
-  padding: 2rem 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .footerLinks {
-  /* Mobile: één kolom */
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:2rem; 
+  justify-content:center;
 }
 
-.footerLinks article,
-.footerLinks .newsletterCard {
-  min-width: 0; /* voorkom overloop op kleine schermen */
+.footerLinks article {
+  flex: 1;
+  min-width: 150px;
 }
 
 .footerLinks h4 {
-  margin: 0 0 .75rem 0;
-  font-size: 1.05rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .footerLinks ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  gap: .6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLinks li {
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .footerLinks a {
-  display: inline-block;             /* groter klikvlak */
-  padding: .35rem .1rem;             /* tap-target op mobiel */
-  text-decoration: none;
-  color: var(--base1);
-  border-radius: 6px;
-  transition: background .2s ease, opacity .2s ease;
-}
-.footerLinks a:hover,
-.footerLinks a:focus-visible {
-  background: rgba(255,255,255,.08);
-  outline: none;
+  text-decoration:none; 
+  color:var(--base1);
 }
 
-/* Newsletter kaartje */
+.footerLinks a:hover {
+  color: var(--blueDetail1);
+  background-color: var(--beige1);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
 .newsletterCard {
-  background: var(--beige1);
-  color: var(--base2);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-}
-.newsletterCard h4 { margin-bottom: .5rem; }
-.newsletterCard .ml-embedded { width: 100%; }
-
-/* Copyright */
-footer .copyright {
-  max-width: 1100px;
-  margin: 1.5rem auto 0;
-  text-align: center;
-  font-size: .9rem;
-  opacity: .85;
-  border-top: 1px solid rgba(255,255,255,.15);
-  padding-top: .9rem;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -773,11 +765,10 @@ footer .copyright {
     margin-right: 2rem;
   }
 
-  footer { padding: 3rem 1.5rem; }
-  
   .footerLinks {
-    grid-template-columns: 1fr 1fr 1.2fr; /* Quick | Contact | Newsletter */
-    gap: 2.25rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
   }
 }
 
