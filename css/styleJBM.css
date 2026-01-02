@@ -1,0 +1,96 @@
+/* Devices section – Zuiderbad style */
+
+.devices {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+/* Eén device blok */
+.devices section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Afbeeldingen */
+.devices img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Tekst */
+.devices .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.devices h2 {
+    font-size: 1.4rem;
+    color: var(--blueDetail1);
+}
+
+.devices p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--base2);
+    max-width: 500px;
+}
+
+/* Laptop mockup */
+.laptop {
+    display: flex;
+    justify-content: center;
+}
+
+.laptop img {
+    max-width: 100%;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .devices section {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .devices img {
+        max-width: 300px;
+    }
+
+    .devices h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .devices {
+        gap: 6rem;
+    }
+
+    .devices section {
+        gap: 4rem;
+    }
+
+    .devices img {
+        max-width: 450px;
+    }
+
+    .devices h2 {
+        font-size: 2rem;
+    }
+
+    .devices p {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+
+    .laptop img {
+        max-width: 90%;
+    }
+}
