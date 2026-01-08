@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
     <loc>https://www.maitealdenkamp.be/</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://www.maitealdenkamp.be/projects/zuiderbad</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.maitealdenkamp.be/projects/autoworld</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.maitealdenkamp.be/projects/special-olympics</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.maitealdenkamp.be/projects/little-wardrobe</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.maitealdenkamp.be/projects/google-doodle</loc>
     <lastmod>2025-09-30</lastmod>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.maitealdenkamp.be/projects/journeys-by-maite.html</loc>
+    <lastmod>2025-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
