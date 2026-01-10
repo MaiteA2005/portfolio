@@ -75,3 +75,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const sideNav = document.querySelector(".sideNav");
+const projectHeader = document.querySelector(".projectHeader");
+const reflectieSection = document.querySelector("#reflectie");
+
+if (sideNav && projectHeader && reflectieSection) {
+    const headerBottom =
+        projectHeader.offsetTop + projectHeader.offsetHeight;
+
+    const reflectieBottom =
+        reflectieSection.offsetTop + reflectieSection.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        /* START: onder projectHeader */
+        if (scrollY > headerBottom - 160 && scrollY < reflectieBottom - 5) {
+            sideNav.classList.add("is-visible");
+        } else {
+            sideNav.classList.remove("is-visible");
+        }
+    });
+}

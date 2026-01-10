@@ -1,54 +1,57 @@
-/* =========================
-   PROJECT LAYOUT
-========================= */
+/* =====================================
+   BASIS
+===================================== */
 
-.projectLayout {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 2.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+html, body {
+    overflow-x: hidden;
 }
 
-/* Zorgt dat anchors niet onder de vaste nav vallen */
-section[id] {
-    scroll-margin-top: 140px;
-}
-
-/* =========================
-   SIDE NAVIGATION
-========================= */
+/* =====================================
+   SIDE NAV – FIXED (JOURNEYS STYLE)
+===================================== */
 
 .sideNav {
-    position: sticky;
-    top: 140px; /* onder je main nav + header spacing */
-    align-self: flex-start;
+    position: fixed;
+    top: 160px;              /* start onder header */
+    left: max(2rem, calc((100vw - 1200px) / 2));
+    z-index: 1000;
+
+    background-color: rgba(245, 241, 230, 0.95);
+    backdrop-filter: blur(6px);
+    padding: 1.5rem 1.75rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* zichtbaar zodra actief */
+.sideNav.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .sideNav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.sideNav li {
-    position: relative;
-}
-
 .sideNav a {
+    position: relative;
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 400;
     color: var(--base2);
     padding-left: 1rem;
-    transition: color 0.3s ease;
 }
 
-/* subtiele indicator */
 .sideNav a::before {
     content: "";
     position: absolute;
@@ -56,73 +59,87 @@ section[id] {
     top: 50%;
     width: 6px;
     height: 6px;
-    background-color: transparent;
     border-radius: 50%;
+    background: transparent;
     transform: translateY(-50%);
-    transition: background-color 0.3s ease;
 }
 
-.sideNav a:hover {
-    color: var(--blueDetail1);
-}
-
-.sideNav a:hover::before {
-    background-color: var(--blueDetail1);
-}
-
-/* actieve sectie (via JS) */
 .sideNav a.active {
-    color: var(--blueDetail1);
     font-weight: 600;
+    color: var(--blueDetail1);
 }
 
 .sideNav a.active::before {
-    background-color: var(--blueDetail1);
+    background: var(--blueDetail1);
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-
-.projectContent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Tablet & mobiel */
+/* mobiel */
 @media (max-width: 1023px) {
-    .projectLayout {
-        grid-template-columns: 1fr;
-        padding: 1.5rem 1rem;
-    }
-
     .sideNav {
         display: none;
     }
 }
 
-/* Grote desktops */
-@media (min-width: 1440px) {
-    .projectLayout {
-        grid-template-columns: 240px 1fr;
-    }
+/* =====================================
+   CONTENT OFFSET (zodat nav niet overlapt)
+===================================== */
 
-    .sideNav a {
-        font-size: 1rem;
+.projectInfo,
+.intro,
+.probleem,
+.opdracht,
+.proces,
+.eindproduct,
+.reflectie {
+    padding-left: 240px;
+}
+
+@media (max-width: 1023px) {
+    .projectInfo,
+    .intro,
+    .probleem,
+    .opdracht,
+    .proces,
+    .eindproduct,
+    .reflectie {
+        padding-left: 0;
     }
 }
 
-/* =========================
-   UX EXTRAS (OPTIONEEL)
-========================= */
+/* =====================================
+   FULL-WIDTH ACHTERGRONDSECTIES
+===================================== */
 
-/* Smooth scroll voor anchor links */
-html {
-    scroll-behavior: smooth;
+.intro,
+.probleem,
+.opdracht,
+.reflectie {
+    position: relative;
+    background: transparent;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.intro::before,
+.probleem::before,
+.opdracht::before,
+.reflectie::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+.intro::before,
+.opdracht::before {
+    background-color: #f5f1e6;
+}
+
+.probleem::before,
+.reflectie::before {
+    background-color: #b0c1d6;
 }
