@@ -1,130 +1,128 @@
-.proces .insta {
-    text-align: center;
+/* =========================
+   PROJECT LAYOUT
+========================= */
+
+.projectLayout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
 
-/* Scroll container */
-.devices {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;              
-    margin: 4rem 0;
+/* Zorgt dat anchors niet onder de vaste nav vallen */
+section[id] {
+    scroll-margin-top: 140px;
 }
 
-.devices section {
+/* =========================
+   SIDE NAVIGATION
+========================= */
+
+.sideNav {
+    position: sticky;
+    top: 140px; /* onder je main nav + header spacing */
+    align-self: flex-start;
+}
+
+.sideNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: left;
     gap: 1rem;
-    padding: 2rem 1rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-in-out;
 }
 
-.devices section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.sideNav li {
+    position: relative;
 }
 
-.devices img {
-    width: 80%;
-    max-width: 320px;
-    height: auto;
-    margin-bottom: 1rem;
+.sideNav a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--base2);
+    padding-left: 1rem;
+    transition: color 0.3s ease;
 }
 
-.devices .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1.5rem;
+/* subtiele indicator */
+.sideNav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
 }
 
-.devices h2 {
-    width: 80%;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.sideNav a:hover {
     color: var(--blueDetail1);
 }
 
-.devices p {
-    width: 80%;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--base2);
+.sideNav a:hover::before {
+    background-color: var(--blueDetail1);
 }
 
-.laptop {
+/* actieve sectie (via JS) */
+.sideNav a.active {
+    color: var(--blueDetail1);
+    font-weight: 600;
+}
+
+.sideNav a.active::before {
+    background-color: var(--blueDetail1);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.projectContent {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
 }
 
-.laptop img {
-    max-width: 100%;
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet & mobiel */
+@media (max-width: 1023px) {
+    .projectLayout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+    }
+
+    .sideNav {
+        display: none;
+    }
 }
 
-@media (min-width: 768px) {
-   .devices section {
-        flex-direction: row;
-        text-align: left;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        padding-left: 2rem;
+/* Grote desktops */
+@media (min-width: 1440px) {
+    .projectLayout {
+        grid-template-columns: 240px 1fr;
     }
 
-    .devices .text {
-        padding: 1rem;
-    }
-
-    .devices img {
-        width: 40%;
-        max-width: 300px;
-        margin-bottom: 0;
-    }
-    
-    .devices h2 {
-        font-size: 1.5rem;
-    }
-
-    .devices p {
+    .sideNav a {
         font-size: 1rem;
-        max-width: 400px;
     }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-    .devices section {
-        flex-direction: row;        
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;                  
-        padding: 3rem 4rem;
-        text-align: left;   
-        width: 100%;
-    }
+/* =========================
+   UX EXTRAS (OPTIONEEL)
+========================= */
 
-    .devices img {
-        width: 40%;                 
-        max-width: 450px;           
-    }
-
-    .devices h2 {
-        width: 80%;
-        font-size: 2rem;            
-        margin-bottom: 1rem;
-    }
-
-    .devices p {
-        font-size: 1.2rem;          
-        line-height: 1.7;
-        max-width: 600px;
-    }
-
-    .laptop img {
-        max-width: 95%;
-    }
+/* Smooth scroll voor anchor links */
+html {
+    scroll-behavior: smooth;
 }
