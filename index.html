@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>     
+<html lang="nl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,7 +13,7 @@
     <meta property="og:title" content="Maite Aldenkamp ~ Portfolio" />
     <meta property="og:description" content="Ontdek het portfolio van Maite Aldenkamp, webdesigner & -developer. Creatief design en digitale projecten die verhalen tot leven brengen. Bekijk haar werk online." />
     <meta property="og:image" content="https://maitealdenkamp.be/images/openGraph.png" />
-    
+
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://maitealdenkamp.be/" />
     <meta property="twitter:title" content="Maite Aldenkamp ~ Portfolio" />
@@ -22,35 +22,47 @@
 
     <link rel="canonical" href="https://www.maitealdenkamp.be/">
     <link rel="icon" type="image/x-icon" href="https://www.maitealdenkamp.be/images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/stylesheet.css">
     <script src="./script.js" defer></script>
 </head>
 <body id="top">
+
     <nav>
         <a href="#top">
             <img class="logo" src="./images/logo.png" alt="Logo">
         </a>
 
-        <button class="hamburger" aria-label="Menu"> ☰ </button>
+        <button class="hamburger" aria-label="Menu">☰</button>
 
         <ul class="navLinks">
-            <li><a href="#top">Home</a></li>
             <li><a href="#overMij">Over mij</a></li>
             <li><a href="#projecten">Projecten</a></li>
+            <li><a href="#vaardigheden">Vaardigheden</a></li>
             <li><a class="contactBtn" href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <img class="heroImg" src="./images/heroImage.png" alt="Hero Image">
-        <section class="heroText">
-            <p>Hallo, ik ben</p>
+        <section class="heroContent">
+            <p class="heroEyebrow">Hallo, ik ben</p>
             <h1>Maite Aldenkamp</h1>
-            <h3>Webdesign & development</h3>
-            <p>
-                <a href="#contact" class="btn">Contact</a>
-                <a href="./files/CV_MaiteAldenkamp.pdf" class="btn" download="CV_MaiteAldenkamp.pdf">Download CV</a>
+            <p class="heroRole">Webdesigner & developer</p>
+            <p class="heroIntro">
+                Van idee tot uitwerking: ik vertaal ideeën naar gebruiksvriendelijke
+                en doordachte websites.
             </p>
+
+            <div class="heroActions">
+                <a href="#contact" class="btn btnPrimary">Laten we samenwerken</a>
+                <a href="./files/CV_MaiteAldenkamp.pdf" class="btn btnSecondary" download="CV_MaiteAldenkamp.pdf">
+                    Download CV
+                </a>
+            </div>
         </section>
     </header>
 
@@ -58,36 +70,36 @@
         <section id="overMij" class="profiel">
             <div class="overMijContainer">
                 <article class="overMij">
-                <h2>Over mij</h2>
-                <p>
-                    Hallo, ik ben <strong>Maite Aldenkamp</strong>, een Digital Experience Design student. 
-                    Ik ben gepassioneerd door het ontwerpen én ontwikkelen van digitale ervaringen. 
-                    Wat mij motiveert, is de combinatie van creatief design en technisch development: 
-                    van het uitwerken van een gebruiksvriendelijke interface tot het effectief bouwen 
-                    van de oplossing. Zo kan ik ideeën niet alleen bedenken, maar ook écht tot leven brengen.
-                </p>
+                    <h2>Over mij</h2>
+                    <p>
+                        Hallo, ik ben <strong>Maite Aldenkamp</strong>, een Digital Experience Design student.
+                        Ik ben gepassioneerd door het ontwerpen én ontwikkelen van digitale ervaringen.
+                        Wat mij motiveert, is de combinatie van creatief design en technisch development:
+                        van het uitwerken van een gebruiksvriendelijke interface tot het effectief bouwen
+                        van de oplossing. Zo kan ik ideeën niet alleen bedenken, maar ook écht tot leven brengen.
+                    </p>
                 </article>
 
                 <article class="opleidingen">
-                <h2>Opleidingen</h2>
-                <ul class="opleidingenLijst">
-                    <li>
-                    <strong>Digital Experience Design</strong>  Thomas More Mechelen  
-                    <span> ~ 2023 – heden</span>
-                    </li>
-                    <li>
-                    <strong>Boekhouden Informatica</strong>  Kobos, Kapelle-op-den-Bos  
-                    <span>~ Afgestudeerd in 2023</span>
-                    </li>
-                </ul>
+                    <h2>Opleidingen</h2>
+                    <ul class="opleidingenLijst">
+                        <li>
+                            <strong>Digital Experience Design</strong> Thomas More Mechelen
+                            <span>~ 2023 – heden</span>
+                        </li>
+                        <li>
+                            <strong>Boekhouden Informatica</strong> Kobos, Kapelle-op-den-Bos
+                            <span>~ Afgestudeerd in 2023</span>
+                        </li>
+                    </ul>
                 </article>
             </div>
         </section>
-        <section id="overMij" class="skillsSection">
+
+        <section id="vaardigheden" class="skillsSection">
             <div class="skillsContainer">
-                <!-- Soft Skills -->
                 <div class="skillsColumn soft">
-                <h3>Soft skills</h3>
+                    <h3>Soft skills</h3>
                     <ul class="softSkills">
                         <li>Werken in groep</li>
                         <li>Sociaal</li>
@@ -96,82 +108,81 @@
                         <li>Leergierig</li>
                     </ul>
                 </div>
-                <!-- Hard Skills -->
+
                 <div class="skillsColumn hard">
                     <h3>Hard skills</h3>
                     <ul class="hardSkills">
                         <li>
-                        <img src="./images/skills/html.png" alt="HTML logo">
-                        <div class="skillContent">
-                            <span>HTML</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="95"></div>
+                            <img src="./images/skills/html.png" alt="HTML logo">
+                            <div class="skillContent">
+                                <span>HTML</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="95"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
 
                         <li>
-                        <img src="./images/skills/css.png" alt="CSS logo">
-                        <div class="skillContent">
-                            <span>CSS</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="90"></div>
+                            <img src="./images/skills/css.png" alt="CSS logo">
+                            <div class="skillContent">
+                                <span>CSS</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="90"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
 
                         <li>
-                        <img src="./images/skills/javascript.png" alt="JavaScript logo">
-                        <div class="skillContent">
-                            <span>JavaScript</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="60"></div>
+                            <img src="./images/skills/javascript.png" alt="JavaScript logo">
+                            <div class="skillContent">
+                                <span>JavaScript</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="60"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
 
                         <li>
-                        <img src="./images/skills/figma.png" alt="Figma logo">
-                        <div class="skillContent">
-                            <span>Figma</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="85"></div>
+                            <img src="./images/skills/figma.png" alt="Figma logo">
+                            <div class="skillContent">
+                                <span>Figma</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="85"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
 
                         <li>
-                        <img src="./images/skills/adobe-illustrator.png" alt="Adobe Illustrator logo">
-                        <div class="skillContent">
-                            <span>Adobe Illustrator</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="70"></div>
+                            <img src="./images/skills/adobe-illustrator.png" alt="Adobe Illustrator logo">
+                            <div class="skillContent">
+                                <span>Adobe Illustrator</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="70"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
 
                         <li>
-                        <img src="./images/skills/adobe-photoshop.png" alt="Adobe Photoshop logo">
-                        <div class="skillContent">
-                            <span>Adobe Photoshop</span>
-                            <div class="skillBar">
-                                <div class="level" data-width="60"></div>
+                            <img src="./images/skills/adobe-photoshop.png" alt="Adobe Photoshop logo">
+                            <div class="skillContent">
+                                <span>Adobe Photoshop</span>
+                                <div class="skillBar">
+                                    <div class="level" data-width="60"></div>
+                                </div>
                             </div>
-                        </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            </section>
         </section>
 
-
-        <!-- Projecten -->
         <section id="projecten" class="projecten">
             <h2>Projecten</h2>
-            <p>In mijn projecten komen creatief design en technisch development samen. Elk project vertelt zijn eigen verhaal — van concept tot realisatie — met aandacht voor gebruiksvriendelijkheid, detail en esthetiek.
-            Van UX/UI-design tot webdevelopment en VR-ervaringen: ik werk graag aan digitale oplossingen die niet alleen mooi ogen, maar ook écht werken voor de gebruiker. 
-            Ontdek hieronder een selectie van mijn werk, waarin ik mijn passie voor design, samenwerking en digitale creatie tot leven breng.</p>
+            <p>
+                In mijn projecten komen creatief design en technisch development samen. Elk project vertelt zijn eigen verhaal — van concept tot realisatie — met aandacht voor gebruiksvriendelijkheid, detail en esthetiek.
+                Van UX/UI-design tot webdevelopment en VR-ervaringen: ik werk graag aan digitale oplossingen die niet alleen mooi ogen, maar ook écht werken voor de gebruiker.
+                Ontdek hieronder een selectie van mijn werk, waarin ik mijn passie voor design, samenwerking en digitale creatie tot leven breng.
+            </p>
 
             <div class="filterButtons">
                 <button class="tag active" data-filter="all">All</button>
@@ -221,7 +232,6 @@
             </ul>
         </section>
 
-        <!-- Contact -->
         <section id="contact" class="contact">
             <div class="contactInhoud">
                 <div class="contactLeft">
@@ -231,11 +241,11 @@
                         Neem gerust contact met me op, ik hoor graag van je!
                     </p>
                     <ul class="contactInfo">
-                    <li><a class="contactLink" href="mailto:info@maitealdenkamp.be" target="_blank">Email</a></li>
-                    <li><a class="contactLink" href="https://github.com/MaiteA2005" target="_blank">Github</a></li>
-                    <li><a class="contactLink" href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386" target="_blank">LinkedIn</a></li>
-                    <li><a class="contactLink" href="https://www.instagram.com/maitealdenkamp/" target="_blank">Instagram</a></li>
-                    <li><a class="contactLink" href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
+                        <li><a class="contactLink" href="mailto:info@maitealdenkamp.be" target="_blank">Email</a></li>
+                        <li><a class="contactLink" href="https://github.com/MaiteA2005" target="_blank">Github</a></li>
+                        <li><a class="contactLink" href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386" target="_blank">LinkedIn</a></li>
+                        <li><a class="contactLink" href="https://www.instagram.com/maitealdenkamp/" target="_blank">Instagram</a></li>
+                        <li><a class="contactLink" href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
 
@@ -249,32 +259,35 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <section class="footerLinks">
-        <article>
-            <h4>Quick links</h4>
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#overMij">Over mij</a></li>
-            <li><a href="#projecten">Projecten</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </article>
-        <article>
-            <h4>Contacteer me</h4>
-            <ul>
-                <li><a href="mailto:info@maitealdenkamp.be" target="_blank">Email</a></li>
-                <li><a href="https://github.com/MaiteA2005" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/maitealdenkamp/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
-            </ul>
-        </article>
-        <aside class="newsletterCard">
-            <div class="ml-embedded" data-form="Cfka3X"></div>
-        </aside>
+            <article>
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#overMij">Over mij</a></li>
+                    <li><a href="#projecten">Projecten</a></li>
+                    <li><a href="#vaardigheden">Vaardigheden</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Contacteer me</h4>
+                <ul>
+                    <li><a href="mailto:info@maitealdenkamp.be" target="_blank">Email</a></li>
+                    <li><a href="https://github.com/MaiteA2005" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/maite-aldenkamp-aa0742386" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/maitealdenkamp/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/maite.aldenkamp" target="_blank">Facebook</a></li>
+                </ul>
+            </article>
+
+            <aside class="newsletterCard">
+                <div class="ml-embedded" data-form="Cfka3X"></div>
+            </aside>
         </section>
+
         <p>&copy; 2025 Maite Aldenkamp. Alle rechten voorbehouden.</p>
     </footer>
 </body>
