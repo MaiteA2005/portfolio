@@ -525,7 +525,7 @@ nav {
 
 .contactLeft p {
   text-align: center;
-  margin: 1.5rem 4.5rem;
+  margin: 1.5rem 0;
   color: var(--base2);
   max-width: 500px;
 }
@@ -533,16 +533,14 @@ nav {
 .contactInfo {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .contactInfo li {
-  background: var(--blueDetail2);
-  border-radius: 50px;
-  width: 75%;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -783,17 +781,11 @@ footer p {
   .contactLeft h2,
   .contactLeft p {
     text-align: left;
-    margin-left: 2rem;
   }
 
   .contactInfo {
     align-items: stretch;
     width: 100%;
-  }
-
-  .contactInfo li {
-    width: 100%;
-    margin-left: 2rem;
   }
 
   .contactForm {
