@@ -16,8 +16,6 @@
   font-weight: normal;
 }
 
-
-
 /* Header */
 .projectHeader {
     display: flex;
@@ -109,7 +107,6 @@
 }
 
 /* Secties */
-
 section {
     max-width: 900px;   
     margin: 0 auto;     
@@ -242,7 +239,6 @@ section p {
     color: var(--base2);
 }
 
-
 /*Andere projecten*/
 .andereProjecten {
     padding: 3rem 0;
@@ -279,7 +275,6 @@ section p {
 
 .andereProjecten .projectCard {
     flex: 0 0 300px;
-    height: auto; /* niet forceren */
     border: 2px solid var(--blueDetail1);
     border-radius: 12px;
     background: var(--base1);
@@ -297,17 +292,13 @@ section p {
 }
 
 .andereProjecten .projectImg {
-    height: 160px;
     background-color: #f4f8fc;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.2rem;
 }
 
 .andereProjecten .projectImg img {
-    width: 80%;
-    height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
