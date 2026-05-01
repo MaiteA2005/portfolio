@@ -90,7 +90,7 @@ nav {
 }
 
 .contactBtn {
-  background: rgba(255, 255, 255, 0.88);
+  background: var(--blueDetail2);
   color: var(--blueDetail1) !important;
   padding: 0.7rem 1.2rem;
   border-radius: 999px;

@@ -1,3 +1,23 @@
+/* Navigation */
+.navbarProject {
+  position: sticky;
+  inset: 0 0 auto 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #0F304A;
+}
+
+.navbarProject a {
+  color: var(--base1);
+  font-weight: normal;
+}
+
+
+
 /* Header */
 .projectHeader {
     display: flex;

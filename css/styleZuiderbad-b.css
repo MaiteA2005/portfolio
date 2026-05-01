@@ -13,7 +13,7 @@ html, body {
 .sideNav {
     position: fixed;
     top: 160px;              /* start onder header */
-    left: max(2rem, calc((100vw - 1200px) / 2));
+    left: 10rem;
     z-index: 1000;
 
     background-color: rgba(245, 241, 230, 0.95);
@@ -78,20 +78,6 @@ html, body {
     .sideNav {
         display: none;
     }
-}
-
-/* =====================================
-   CONTENT OFFSET (zodat nav niet overlapt)
-===================================== */
-
-.projectInfo,
-.intro,
-.probleem,
-.opdracht,
-.proces,
-.eindproduct,
-.reflectie {
-    padding-left: 240px;
 }
 
 @media (max-width: 1023px) {
