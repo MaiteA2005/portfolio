@@ -438,7 +438,6 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
-  height: 250px;
   position: relative;
 }
 
@@ -473,7 +472,6 @@ nav {
   justify-content: center;
   font-weight: bold;
   z-index: 1;
-  height: 180px;
 }
 
 .projectImg img {
