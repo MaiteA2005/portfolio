@@ -22,29 +22,79 @@ entries.forEach(entry => {
 
 skillLevels.forEach(level => skillObserver.observe(level));
 
-// Filter voor projecten
+// Filter voor projecten + zie meer
 const filterButtons = document.querySelectorAll(".filterButtons .tag");
-const projectCards  = document.querySelectorAll(".projectCard");
+const projectCards = document.querySelectorAll(".projectCard");
+const seeMoreBtn = document.querySelector(".seeMoreBtn");
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-    filterButtons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
+let currentFilter = "all";
+let showAllProjects = false;
 
-    const filter = button.dataset.filter;
+function getProjectLimit() {
+    if (window.innerWidth >= 1024) return 6; // desktop
+    if (window.innerWidth >= 768) return 4;  // tablet
+    return 3;                                // mobile
+}
+
+function updateProjects() {
+    const limit = getProjectLimit();
+    let visibleCount = 0;
 
     projectCards.forEach(card => {
         const categories = (card.dataset.category || "")
-        .split(/[,\s]+/)              // split op komma's of spaties
-        .map(s => s.trim())
-        .filter(Boolean);
+            .split(/[,\s]+/)
+            .map(s => s.trim())
+            .filter(Boolean);
 
-        const show = filter === "all" || categories.includes(filter);
-        card.style.display = show ? "flex" : "none";
+        const matchesFilter = currentFilter === "all" || categories.includes(currentFilter);
+
+        if (!matchesFilter) {
+            card.style.display = "none";
+            return;
+        }
+
+        visibleCount++;
+
+        if (!showAllProjects && visibleCount > limit) {
+            card.style.display = "none";
+        } else {
+            card.style.display = "flex";
+        }
     });
+
+    if (seeMoreBtn) {
+        seeMoreBtn.style.display = visibleCount > limit ? "inline-flex" : "none";
+        seeMoreBtn.classList.toggle("active", showAllProjects);
+        seeMoreBtn.setAttribute("aria-expanded", showAllProjects);
+
+        seeMoreBtn.innerHTML = showAllProjects
+            ? 'Zie minder <span>⌃</span>'
+            : 'Zie meer <span>⌄</span>';
+    }
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        currentFilter = button.dataset.filter;
+        showAllProjects = false;
+
+        updateProjects();
     });
 });
 
+if (seeMoreBtn) {
+    seeMoreBtn.addEventListener("click", () => {
+        showAllProjects = !showAllProjects;
+        updateProjects();
+    });
+}
+
+window.addEventListener("resize", updateProjects);
+
+updateProjects();
 
 // Animation voor secties in "devices" sectie (project zuiderbad)
 const sections = document.querySelectorAll(".devices section");
