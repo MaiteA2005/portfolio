@@ -67,9 +67,18 @@ function updateProjects() {
         seeMoreBtn.classList.toggle("active", showAllProjects);
         seeMoreBtn.setAttribute("aria-expanded", showAllProjects);
 
-        seeMoreBtn.innerHTML = showAllProjects
-            ? 'Zie minder <span>⌃</span>'
-            : 'Zie meer <span>⌄</span>';
+        const seeMoreText = seeMoreBtn.querySelector(".seeMoreText");
+        const seeMoreIcon = seeMoreBtn.querySelector(".seeMoreIcon");
+
+        if (showAllProjects) {
+            seeMoreText.textContent = "Zie minder";
+            seeMoreIcon.src = "./images/pijlBoven.svg";
+            seeMoreIcon.alt = "Pijl naar boven";
+        } else {
+            seeMoreText.textContent = "Zie meer";
+            seeMoreIcon.src = "./images/pijlBeneden.svg";
+            seeMoreIcon.alt = "Pijl naar beneden";
+        }
     }
 }
 
